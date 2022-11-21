@@ -18,14 +18,14 @@ const Contacts = () => {
   }, [dispatch, token]);
 
   return (
-<Container>
+token ? <Container>
       <Title>Phonebook</Title>
       <ContactForm />
       <Title>Contacts</Title>
       <Filter />
       {contatsList && <ContactList />}
-    </Container>
+    </Container>: <Title>Please login or register</Title>
   );
 };
 export default Contacts;
-//: <Title>Please login or register</Title>
+//
